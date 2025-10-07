@@ -1,72 +1,109 @@
-Site de Receitas Deliciosas
-📖 Sobre o Projeto
-Este é um projeto de um site de receitas front-end, simples e elegante. Ele foi desenvolvido para demonstrar a manipulação de dados com JavaScript puro, criando uma galeria de receitas dinâmica com funcionalidades de busca e uma página de detalhes para cada prato. O design é limpo, responsivo e focado na experiência do usuário.
+# 🍰 Site de Receitas Deliciosas
 
-✨ Funcionalidades
-Página Inicial (index.html): Apresenta uma seção "hero" atraente e um formulário de inscrição para newsletter com validação.
+## 📖 Sobre o Projeto
+O **Site de Receitas Deliciosas** é um projeto front-end simples e elegante, desenvolvido para demonstrar a manipulação de dados com **JavaScript puro**.  
+Ele apresenta uma **galeria de receitas dinâmica**, com **busca em tempo real** e **página de detalhes** para cada prato.  
+O design é **limpo, responsivo** e focado na **experiência do usuário**.
 
-Galeria de Receitas (receitas.html):
+---
 
-Exibe todas as receitas disponíveis em um layout de grade responsivo.
+## ✨ Funcionalidades
 
-Apresenta um efeito de "skeleton loading" inicial para uma melhor experiência de usuário enquanto os cards são renderizados.
+### 🏠 Página Inicial (`index.html`)
+- Seção *hero* com destaque visual.  
+- Formulário de inscrição para newsletter com validação.  
 
-Busca Dinâmica: Permite que o usuário filtre as receitas em tempo real, buscando tanto no título quanto nos ingredientes.
+### 🍳 Galeria de Receitas (`receitas.html`)
+- Exibe todas as receitas em um **layout de grade responsivo**.  
+- Efeito de **"skeleton loading"** para melhorar a experiência do usuário durante o carregamento.  
+- **Busca dinâmica**: filtra receitas em tempo real (por título e ingredientes).  
+- Mensagem informativa quando nenhuma receita é encontrada.  
 
-Mensagem informativa caso nenhuma receita seja encontrada na busca.
+### 📄 Página de Detalhes da Receita (`receita.html`)
+- Carregamento dinâmico dos dados da receita (imagem, título, ingredientes, modo de preparo).  
+- Obtém o **ID da receita via URL** (query parameter).  
+- Layout limpo e de fácil leitura.  
 
-Página de Detalhes da Receita (receita.html):
+### 📱 Design Responsivo
+- Adapta-se perfeitamente a diferentes tamanhos de tela (desktop, tablet e mobile).  
 
-Carrega dinamicamente os dados (imagem, título, ingredientes, modo de preparo) da receita selecionada a partir de um ID na URL (query parameter).
+### 🧩 JavaScript Modularizado
+- Código dividido em módulos com responsabilidades específicas:  
+  - `dados-receitas.js`  
+  - `galeria.js`  
+  - `carregar-receita.js`  
+  - `script.js`  
 
-Layout claro e organizado para facilitar a leitura da receita.
+---
 
-Design Responsivo: O site se adapta a diferentes tamanhos de tela, de desktops a dispositivos móveis.
+## 🚀 Tecnologias Utilizadas
 
-JavaScript Modularizado: O código JavaScript é dividido em arquivos com responsabilidades específicas (dados-receitas.js, galeria.js, carregar-receita.js, script.js), facilitando a manutenção.
+- **HTML5** → Estrutura semântica das páginas.  
+- **CSS3** → Estilização, layout responsivo (Flexbox e Grid) e animações.  
+- **JavaScript (ES6+)** → Interatividade, manipulação do DOM e lógica de busca.  
 
-🚀 Tecnologias Utilizadas
-O projeto foi construído utilizando tecnologias web fundamentais:
+---
 
-HTML5: Para a estrutura semântica das páginas.
+## 📂 Estrutura de Arquivos
 
-CSS3: Para estilização, layout (Flexbox e Grid), responsividade e animações.
-
-JavaScript (ES6+): Para toda a interatividade, manipulação do DOM, lógica de busca e carregamento dinâmico de conteúdo.
-
-📂 Estrutura de Arquivos
-O projeto está organizado da seguinte forma:
-
-/
 ├── Imagens/
-│   ├── brownie-de-chocolate.png
-│   └── ... (outras imagens de receitas)
-├── index.html                # Página inicial
-├── receitas.html             # Página com a galeria de todas as receitas
-├── receita.html              # Modelo da página de detalhes de uma receita
-├── style.css                 # Folha de estilos principal
-├── dados-receitas.js         # Arquivo com o array de objetos de todas as receitas
-├── galeria.js                # Lógica para renderizar e filtrar a galeria em receitas.html
-├── carregar-receita.js       # Lógica para carregar os dados na página receita.html
-└── script.js                 # Scripts gerais (validação da newsletter, ano dinâmico no footer)
-Detalhes dos Scripts:
-dados-receitas.js: Atua como um "banco de dados" local, armazenando todas as informações das receitas em um array de objetos.
+│ ├── brownie-de-chocolate.png
+│ └── ... (outras imagens de receitas)
+├── index.html # Página inicial
+├── receitas.html # Galeria de todas as receitas
+├── receita.html # Página de detalhes da receita
+├── style.css # Estilos principais
+├── dados-receitas.js # "Banco de dados" local de receitas
+├── galeria.js # Renderização e busca de receitas
+├── carregar-receita.js # Carregamento dinâmico da receita selecionada
+└── script.js # Scripts gerais (validação e footer)
 
-galeria.js: Responsável por ler o array de receitas e criar dinamicamente os cards na página receitas.html. Também contém a lógica do campo de busca para filtrar os resultados.
 
-carregar-receita.js: Pega o id da receita da URL, encontra a receita correspondente no array de dados e preenche a página receita.html com as informações corretas.
+---
 
-script.js: Contém funcionalidades aplicadas a múltiplas páginas, como a validação do formulário de newsletter e a atualização automática do ano no rodapé.
+## 🧠 Detalhes dos Scripts
 
-🛠️ Como Executar
-Este é um projeto front-end estático, portanto, não requer um servidor ou dependências complexas para ser executado.
+### `dados-receitas.js`
+Atua como um *banco de dados local*, armazenando todas as informações das receitas em um **array de objetos**.
 
-Clone o repositório ou baixe os arquivos.
+### `galeria.js`
+Responsável por **renderizar dinamicamente** os cards das receitas e aplicar a **lógica de busca em tempo real**.
 
-Navegue até a pasta do projeto.
+### `carregar-receita.js`
+Lê o **ID da receita** a partir da URL e **carrega automaticamente** os dados correspondentes na página de detalhes.
 
-Abra o arquivo index.html no seu navegador de preferência.
+### `script.js`
+Contém funções gerais, como:
+- **Validação** do formulário de newsletter.  
+- **Atualização automática** do ano no rodapé.  
 
-Você pode simplesmente dar um duplo clique no arquivo ou arrastá-lo para a janela do navegador.
+---
 
-E pronto! Você pode navegar entre a página inicial e a galeria de receitas, testar a busca e visualizar os detalhes de cada prato.
+## 🛠️ Como Executar
+
+Este é um projeto **front-end estático**, portanto não requer servidor ou dependências externas.
+
+### Passos:
+1. **Clone** o repositório ou **baixe os arquivos**:
+   ```bash
+   git clone https://github.com/SEU_USUARIO/site-receitas-deliciosas.git
+
+2. Acesse a pasta do projeto:
+
+cd site-receitas-deliciosas
+
+-------------------------------------------------------------------------------------------------
+3. Abra o arquivo index.html no navegador:
+
+Dê um duplo clique no arquivo, ou
+
+Arraste-o para a janela do navegador.
+
+✅ Pronto!
+Agora você pode navegar entre as páginas, testar a busca e visualizar os detalhes das receitas.
+
+📜 Licença
+
+Este projeto está sob a licença MIT
+
+👨‍💻 Desenvolvido por Dev. André Narcizo
