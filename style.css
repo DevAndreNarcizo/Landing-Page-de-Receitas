@@ -1,0 +1,415 @@
+/* 1. VARIÁVEIS E RESET GLOBAL */
+:root {
+    --primary-color: #4CAF50;
+    /* Verde Principal */
+    --secondary-color: #388E3C;
+    /* Verde Escuro (Hover) */
+    --dark-color: #3E2723;
+    /* Marrom Café (Títulos, Footer) */
+    --light-color: #F5F5F5;
+    /* Cinza Claro (Fundo Seções) */
+    --text-color: #4E342E;
+    /* Marrom (Texto Geral) */
+    --white-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+    --container-width: 1100px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* 2. COMPONENTES REUTILIZÁVEIS */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+}
+
+/* 3. HEADER E NAVEGAÇÃO */
+.header {
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+/* 4. SEÇÃO HERO (PÁGINA INICIAL) */
+/* 4. SEÇÃO HERO (PÁGINA INICIAL) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Imagens/hero-background.png') no-repeat center center/cover;
+    color: var(--white-color);
+    text-align: center;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--white-color);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem;
+}
+
+/* 5. SEÇÃO NEWSLETTER (PÁGINA INICIAL) */
+.newsletter {
+    padding: 80px 0;
+    background-color: var(--light-color);
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+}
+
+.newsletter p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#newsletter-form {
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#form-message {
+    margin-top: 1rem;
+    font-weight: 500;
+    min-height: 24px;
+}
+
+#form-message.success {
+    color: #27ae60;
+}
+
+#form-message.error {
+    color: #c0392b;
+}
+
+/* 6. PÁGINA DE RECEITAS */
+.page-title {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.page-title h1,
+.page-title p {
+    color: var(--white-color);
+}
+
+.recipes-section {
+    padding: 80px 0;
+}
+
+.recipes-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.recipe-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-top: 0;
+}
+
+.card-content p {
+    flex-grow: 1;
+}
+
+/* 7. FOOTER */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* 8. MEDIA QUERIES PARA RESPONSIVIDADE */
+@media (min-width: 768px) {
+    .form-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .form-group input {
+        width: 250px;
+    }
+
+    .recipes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .recipes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 9. ESTILOS DA PÁGINA DE RECEITA INDIVIDUAL */
+.recipe-page .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    background-color: var(--light-color);
+}
+
+.recipe-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.ingredients ul,
+.instructions ol {
+    padding-left: 20px;
+}
+
+.ingredients li,
+.instructions li {
+    margin-bottom: 0.8rem;
+    line-height: 1.8;
+}
+
+.btn-back {
+    display: block;
+    width: fit-content;
+    margin: 3rem auto 0;
+}
+
+@media (min-width: 768px) {
+    .recipe-content {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+
+/* 10. NOVOS ESTILOS PARA UX E UI */
+
+/* Barra de Busca */
+.search-container {
+    margin-bottom: 2.5rem;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 2px solid #ddd;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.2);
+}
+
+/* Mensagem de "Não Encontrado" */
+.no-results {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 2rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.recipe-card {
+    /* ... (estilos existentes do card) ... */
+    opacity: 0;
+    /* Inicia invisível para a animação */
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Skeleton Loading */
+@keyframes shimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+.skeleton {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 400px;
+    /* Ajustado para o tamanho do card */
+    min-height: 400px;
+    animation: shimmer 1.5s linear infinite;
+}

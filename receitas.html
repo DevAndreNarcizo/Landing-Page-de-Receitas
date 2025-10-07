@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossas Receitas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Receitas.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="receitas.html" class="active">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <div class="container">
+                <h1>Nossas Receitas</h1>
+                <p>Explore um mundo de sabores com nossa coleção completa.</p>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <div class="container">
+                <div class="search-container">
+                    <input type="search" id="search-bar" placeholder="Buscar por nome ou ingrediente...">
+                </div>
+
+                <div id="recipes-grid-container" class="recipes-grid">
+                    <article class="recipe-card skeleton"></article>
+                    <article class="recipe-card skeleton"></article>
+                    <article class="recipe-card skeleton"></article>
+                    <article class="recipe-card skeleton"></article>
+                    <article class="recipe-card skeleton"></article>
+                    <article class="recipe-card skeleton"></article>
+                </div>
+
+                <p id="no-results-message" class="no-results" style="display: none;">Nenhuma receita encontrada.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Receitas Deliciosas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="dados-receitas.js"></script>
+    <script src="galeria.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

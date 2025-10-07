@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Deliciosas - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Receitas.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Receitas Deliciosas</h1>
+                <p>Descubra pratos fáceis e saborosos para transformar suas refeições.</p>
+                <a href="receitas.html" class="btn btn-primary">Ver Receitas</a>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2>Receba Novidades no Seu E-mail</h2>
+                <p>Inscreva-se para obter as melhores receitas diretamente na sua caixa de entrada.</p>
+                <form id="newsletter-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Inscrever-se</button>
+                </form>
+                <p id="form-message"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year">2024</span> Receitas Deliciosas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

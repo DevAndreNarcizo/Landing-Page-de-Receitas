@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Receitas.</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="receitas.html" class="active">Receitas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="recipe-page">
+        <div class="container">
+            <h1 id="recipe-title">Carregando receita...</h1>
+            <img src="" alt="" id="recipe-image" class="recipe-image">
+
+            <div id="recipe-content-container" class="recipe-content" style="display: none;">
+                <div class="ingredients">
+                    <h2>Ingredientes</h2>
+                    <ul id="recipe-ingredients"></ul>
+                </div>
+                <div class="instructions">
+                    <h2>Modo de Preparo</h2>
+                    <ol id="recipe-instructions"></ol>
+                </div>
+            </div>
+            <p id="recipe-not-found" style="display: none; text-align: center; font-size: 1.2rem;">Receita não
+                encontrada.</p>
+
+            <a href="receitas.html" class="btn btn-primary btn-back">Voltar para Receitas</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Receitas Deliciosas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="dados-receitas.js"></script>
+    <script src="carregar-receita.js"></script>
+</body>
+
+</html>
